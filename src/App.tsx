@@ -34,7 +34,11 @@ function App() {
 			}
 		};
 
-		fetchData();
+		if (!data) fetchData();
+
+		const interval = setInterval(fetchData, 3000);
+
+		return () => clearInterval(interval);
 	});
 
 	return (

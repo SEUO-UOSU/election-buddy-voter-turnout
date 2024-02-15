@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import uosu from "./assets/uosu.svg";
 import ge from "./assets/ge.svg";
 import "./App.css";
@@ -18,6 +18,14 @@ type ElectionData = {
 
 function App() {
 	const [data, setData] = useState<ElectionData | null>(null);
+
+	const turnout = useMemo(() => {
+		if (!data) return "Loading...";
+		const votes = parseInt(data.pluralized_submitted_ballot_count);
+		const voters = parseInt(data.pluralized_eligible_voter_count);
+		return data ? `${((votes / voters) * 100).toFixed(2)}%` : "Loading...";
+	}, [data]);
+
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await fetch(`${CORS}${URL}`);
@@ -78,7 +86,7 @@ function App() {
 						<h1>Voter turnout</h1>
 					</div>
 					<div className="group">
-						<p>{data.ballot_count_percentage}</p>
+						<p>{turnout}</p>
 						<small>
 							{data.pluralized_submitted_ballot_count} / {data.pluralized_eligible_voter_count}
 						</small>

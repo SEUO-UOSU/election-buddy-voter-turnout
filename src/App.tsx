@@ -4,7 +4,7 @@ import ge from "./assets/ge.svg";
 import "./App.css";
 
 const CORS = "https://cors.arcanist.workers.dev/";
-const URL = "https://secure.electionbuddy.com/widget/JRL2D6SJT62K.js";
+const URL = "https://secure.electionbuddy.com/widget/6468R9G4K4HY.js";
 const APPENDIX = `window.r = r;`;
 
 type ElectionData = {

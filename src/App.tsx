@@ -34,7 +34,7 @@ function App() {
 			new Function(`${script}${APPENDIX}`)();
 			if ("r" in window) {
 				const r = window.r as ElectionData;
-				r.pluralized_submitted_ballot_count = r.pluralized_submitted_ballot_count.replace(" ballots", "");
+				r.pluralized_submitted_ballot_count = r.pluralized_submitted_ballot_count.replace(/ ballots?/g, "");
 				r.pluralized_eligible_voter_count = r.pluralized_eligible_voter_count.replace(" eligible voters", "");
 				setData(r);
 			} else {

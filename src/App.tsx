@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import uosu from "./assets/uosu.svg";
-import ge from "./assets/ge.svg";
+// import ge from "./assets/ge.svg";
 import "./App.css";
 
 const CORS = "https://cors.arcanist.workers.dev/";

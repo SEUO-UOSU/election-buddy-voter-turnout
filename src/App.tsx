@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import uosu from "./assets/uosu.svg";
-import se from "./assets/se.svg"; //Change 'se' to 'ge' for general elections
+// import uosu from "./assets/uosu.svg";
+// import se from "./assets/se.svg"; //Change 'se' to 'ge' for general elections
 import "./App.css";
 
 const CORS = "https://cors.arcanist.workers.dev/";
@@ -80,7 +80,7 @@ function App() {
 			></div>
 			{data ? (
 				<>
-					<img src={se} alt="Élections partielles 2024 General Elections" />
+					{/*<img src={se} alt="Élections partielles 2024 General Elections" />*/}
 					{/* Change 'se' to 'ge' for general elections and update text */}
 					<div className="group">
 						<h1>Participation électorale</h1>

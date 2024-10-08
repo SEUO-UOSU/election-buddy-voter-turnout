@@ -80,7 +80,7 @@ function App() {
 			></div>
 			{data ? (
 				<>
-					<img src={ge} alt="Élections générales 2024 General Elections" />
+					{/* <img src={ge} alt="Élections générales 2024 General Elections" /> */}
 					<div className="group">
 						<h1>Participation électorale</h1>
 						<h1>Voter turnout</h1>

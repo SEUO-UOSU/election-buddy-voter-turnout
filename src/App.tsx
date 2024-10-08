@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-// import uosu from "./assets/uosu.svg";
+import uosu from "./assets/uosu.svg";
 // import se from "./assets/se.svg"; //Change 'se' to 'ge' for general elections
 import "./App.css";
 

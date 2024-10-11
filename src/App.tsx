@@ -3,7 +3,7 @@ import uosu from "./assets/uosu.svg";
 // import se from "./assets/se.svg"; //Change 'se' to 'ge' for general elections
 import "./App.css";
 
-const CORS = "https://cors.arcanist.workers.dev/";
+const CORS = "https://turnout-counter-cors-proxy.university-of-ottawa-student-union-seuo.workers.dev/";
 const URL = "https://secure.electionbuddy.com/widget/8Z9MFDYGMQ7L.js";
 const APPENDIX = `window.r = r;`;
 

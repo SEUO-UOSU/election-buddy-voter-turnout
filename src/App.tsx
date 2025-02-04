@@ -4,7 +4,7 @@ import uosu from "./assets/uosu.svg";
 import "./App.css";
 
 const CORS = "https://turnout-counter-cors-proxy.university-of-ottawa-student-union-seuo.workers.dev/";
-const URL = "https://secure.electionbuddy.com/widget/8Z9MFDYGMQ7L.js";
+const URL = "https://secure.electionbuddy.com/widget/6P4T7XSHSPZ3.js";
 const APPENDIX = `window.r = r;`;
 
 type ElectionData = {

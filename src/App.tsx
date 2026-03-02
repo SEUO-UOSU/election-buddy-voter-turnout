@@ -1,10 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import uosu from "./assets/uosu.svg";
-// import se from "./assets/se.svg"; //Change 'se' to 'ge' for general elections
+import uosu from "./assets/uosu.svg"; // Logo at the bottom of counter page, to update add new file and point to new filepath
 import "./App.css";
 
-const CORS = "https://turnout-counter-cors-proxy.university-of-ottawa-student-union-seuo.workers.dev/";
-const URL = "https://secure.electionbuddy.com/widget/M7RG6F725QTX.js";
+const CORS = process.env.CORS;
+const URL = process.env.URL;
 const APPENDIX = `window.r = r;`;
 
 type ElectionData = {

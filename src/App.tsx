@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import uosu from "./assets/uosu.svg"; // Logo at the bottom of counter page, to update add new file and point to new filepath
 import "./App.css";
 
-const CORS = process.env.CORS;
-const URL = process.env.URL;
+const CORS = import.meta.env.VITE_CORS;
+const URL = import.meta.env.VITE_URL;
 const APPENDIX = `window.r = r;`;
 
 type ElectionData = {

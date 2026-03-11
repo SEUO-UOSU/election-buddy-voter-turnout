@@ -3,7 +3,8 @@ import logo from "./assets/logo.svg"; // Logo at the bottom of counter page, to 
 import "./App.css";
 
 const CORS = import.meta.env.VITE_CORS; // CORS proxy URL, e.g. "https://cors-anywhere.herokuapp.com/"
-const URL = import.meta.env.VITE_URL; // URL of ElectinsBuddy widget script, e.g. "https://secure.electionbuddy.com/widget/XRYYUCDMR7HJ.js"
+const SCRIPT_URL = import.meta.env.VITE_SCRIPT_URL; // URL of ElectinsBuddy widget script, e.g. "https://secure.electionbuddy.com/widget/XRYYUCDMR7HJ.js"
+const LOGO_URL = import.meta.env.VITE_LOGO_URL; // URL for logo, e.g. "https://corruptinc.com/logo.svg"
 const LOGO_ALT_TEXT = import.meta.env.VITE_LOGO_ALT_TEXT; // Alt text for logo, e.g. "Corrupt Inc. logo"
 const APPENDIX = `window.r = r;`;
 
@@ -28,7 +29,7 @@ function App() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const response = await fetch(`${CORS}${URL}`);
+			const response = await fetch(`${CORS}${SCRIPT_URL}`);
 			const wrapped = await response.text();
 			const script = wrapped.slice(2, -2).split("\n")[0];
 			new Function(`${script}${APPENDIX}`)();
@@ -91,7 +92,7 @@ function App() {
 						</small>
 					</div>
 					<img
-						src={logo}
+						src={LOGO_URL || logo}
 						width={400}
 						alt={LOGO_ALT_TEXT}
 					/>

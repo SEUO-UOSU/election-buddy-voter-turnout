@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import uosu from "./assets/uosu.svg"; // Logo at the bottom of counter page, to update add new file and point to new filepath
+import logo from "./assets/logo.svg"; // Logo at the bottom of counter page, to update, replace assets/logo.svg
 import "./App.css";
 
-const CORS = import.meta.env.VITE_CORS;
-const URL = import.meta.env.VITE_URL;
+const CORS = import.meta.env.VITE_CORS; // CORS proxy URL, e.g. "https://cors-anywhere.herokuapp.com/"
+const URL = import.meta.env.VITE_URL; // URL of ElectinsBuddy widget script, e.g. "https://secure.electionbuddy.com/widget/XRYYUCDMR7HJ.js"
+const LOGO_ALT_TEXT = import.meta.env.VITE_LOGO_ALT_TEXT; // Alt text for logo, e.g. "Corrupt Inc. logo"
 const APPENDIX = `window.r = r;`;
 
 type ElectionData = {
@@ -79,8 +80,6 @@ function App() {
 			></div>
 			{data ? (
 				<>
-					{/*<img src={se} alt="Élections partielles 2024 General Elections" />*/}
-					{/* Change 'se' to 'ge' for general elections and update text */}
 					<div className="group">
 						<h1>Participation électorale</h1>
 						<h1>Voter turnout</h1>
@@ -92,9 +91,9 @@ function App() {
 						</small>
 					</div>
 					<img
-						src={uosu}
+						src={logo}
 						width={400}
-						alt="Syndicat étudiant de l'Université d'Ottawa | University of Ottawa Students' Union"
+						alt={LOGO_ALT_TEXT}
 					/>
 				</>
 			) : (

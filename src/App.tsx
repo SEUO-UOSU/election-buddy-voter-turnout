@@ -4,7 +4,6 @@ import "./App.css";
 
 const CORS = import.meta.env.VITE_CORS; // CORS proxy URL, e.g. "https://cors-anywhere.herokuapp.com/"
 const SCRIPT_URL = import.meta.env.VITE_SCRIPT_URL; // URL of ElectinsBuddy widget script, e.g. "https://secure.electionbuddy.com/widget/XRYYUCDMR7HJ.js"
-const LOGO_URL = import.meta.env.VITE_LOGO_URL; // URL for logo, e.g. "https://corruptinc.com/logo.svg"
 const LOGO_ALT_TEXT = import.meta.env.VITE_LOGO_ALT_TEXT; // Alt text for logo, e.g. "Corrupt Inc. logo"
 const APPENDIX = `window.r = r;`;
 
@@ -92,7 +91,7 @@ function App() {
 						</small>
 					</div>
 					<img
-						src={LOGO_URL || logo}
+						src={logo}
 						width={400}
 						alt={LOGO_ALT_TEXT}
 					/>

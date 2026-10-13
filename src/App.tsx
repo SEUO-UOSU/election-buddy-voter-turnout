@@ -92,7 +92,7 @@ function App() {
 					</div>
 					<img
 						src={logo}
-						width={400}
+						width={200}
 						alt={LOGO_ALT_TEXT}
 					/>
 				</>
